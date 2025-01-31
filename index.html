@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script>
         tailwind.config = {
@@ -18,6 +19,9 @@
               colors: {
                 clifford: '#da373d',
                 nav: '#FFF9F4',
+                mini: 'rgba(17, 17, 17, 1)',
+                bg: '#F9DF8A',
+                bg2: 'rgba(255, 249, 244, 1)',
               },
               fontFamily:{
                 primaryfont:['ADLaM Display', 'sans-serif'],
@@ -30,16 +34,19 @@
         }
       </script>
     
+
+
 </head>
 <body>
     <header class="">
-        <div class=" font-secondfont bg-nav navbar bg-base-100">
-            <div class="flex justify-between gap-40  max-w-screen-xl mx-auto">
+      <!-- nav-bar design -->
+        <div class=" font-secondfont bg-nav navbar bg-base-100 mb-20">
+            <div class="flex justify-between lg:gap-56  max-w-screen-xl mx-auto">
                 <div class="navbar-start">
                 
                     <div class="flex">
                         <img src="c1-assets/logo-header.png" alt=""> 
-                        <h3 class="ml-2 mt-2   text-2xl ">Browse<span class="text-yellow-300">4</span>Pets</h3>
+                        <h3 class="ml-2 mt-2 mr-44 lg:mr-0   text-2xl ">Browse<span class="text-yellow-300">4</span>Pets</h3>
                       </div>
                 </div>
                 <div class="navbar-center hidden  lg:flex">
@@ -50,7 +57,7 @@
                     </ul>
                   </div>
                 <div class="flex">
-                  <button class="btn btn-ghost btn-circle">
+                  <button class="hidden lg:visible btn btn-ghost btn-circle">
                     <div class="indicator">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +74,7 @@
                       <span class="badge badge-xs badge-primary indicator-item"></span>
                     </div>
                   </button>
-                  <button class="btn btn-ghost btn-circle">
+                  <button class="hidden lg:visible btn btn-ghost btn-circle">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-5 w-5"
@@ -82,13 +89,13 @@
                     </svg>
                   </button>
                 
-                <div class=" ">
-                    <button class="mx-2 h-10 border-solid border-2 w-24 border-yellow-400 rounded-lg hover:bg-green-400 transition ease-in-out hover:border-none">Login</button>
+                <div class=" hidden lg:visible ">
+                    <button class="mx-2 sm:hidden h-10 border-solid border-2 w-24 border-yellow-400 rounded-lg hover:bg-green-400 transition ease-in-out hover:border-none">Login</button>
                 </div>
-                <div class="">
-                    <button class="h-10  w-28 border-none bg-yellow-400 rounded-lg hover:bg-yellow-500 transition ease-in-out">Register</button>
+                <div class="hidden lg:visible">
+                    <button class="h-10   w-28 border-none bg-yellow-400 rounded-lg hover:bg-yellow-500 transition ease-in-out">Register</button>
                 </div>
-                <div class="dropdown visible md:hidden lg:hidden">
+                <div class="dropdown visible md:hidden lg:hidden font-secondfont ">
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -103,23 +110,254 @@
                           d="M4 6h16M4 12h16M4 18h7" />
                       </svg>
                     </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a>Homepage</a></li>
-                      <li><a>Portfolio</a></li>
-                      <li><a>About</a></li>
-                    </ul>
+                    
                   </div>
                 </div>
             </div>
           </div>
+
+          <!-- banner design -->
+          
+            <div class="max-w-screen-xl mx-auto mb-24">
+              <div class="lg:relative lg:-mb-96">
+                <h3 class="font-primaryfont text-5xl leading-relaxed ">Pamper Your Pet, <br> Because They Deserve <br> the Bes</h3>
+              <p class="my-5 font-secondfont text-mini"> Discover a world of treats, toys, and essentials handpicked for <br> your furry friends. Shop now and make tails wag with joy!</p>
+              <button class="h-10  w-28 border-none bg-yellow-400 rounded-lg hover:bg-yellow-500 transition ease-in-out"><a href="">Find a pet</a></button>
+              </div>
+              <div class="">
+                <img class="" src="c1-assets/cat-big.png" alt="">
+              </div>
+
+            </div>
+         
     </header>
     <main>
+      <section class="max-w-screen-xl mx-auto mb-20">
+        <h3 class="mb-10 font-primaryfont text-2xl">Browse By Categories</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-6 mx-auto text-center">
+          <div class=" bg-bg rounded-lg ">
+            <img class="mx-auto my-5 p-5 bg-white rounded-full" src="c1-assets/dog-cartoon.png" alt="">
+            <h4 class="font-bold">Dog</h4>
+            <p>3 items</p>
+          </div>
+          <div class="bg-bg rounded-lg h-56">
+            <img class="mx-auto my-5 p-5 bg-white rounded-full" src="c1-assets/fish-cartoon.png" alt="">
+            <h4 class="font-bold">Fish</h4>
+            <p>3 items</p>
+          </div>
+          <div class="bg-bg rounded-lg h-56">
+            <img class="mx-auto my-5 p-5 bg-white rounded-full" src="c1-assets/cat-cartoon.png" alt="">
+            <h4 class="font-bold">Cat</h4>
+            <p>3 items</p>
+          </div>
+          <div class="bg-bg rounded-lg h-56">
+            <img class="mx-auto my-5 p-5 bg-white rounded-full" src="c1-assets/bird-cartoon.png" alt="">
+            <h4 class="font-bold">Brids</h4>
+            <p>3 items</p>
+          </div>
+          <div class="bg-bg rounded-lg h-56">
+            <img class="mx-auto my-5 p-5 bg-white rounded-full" src="c1-assets/mouse-cartoon.png" alt="">
+            <h4 class="font-bold">Small Pet</h4>
+            <p>3 items</p>
+          </div>
+          <div class="bg-bg rounded-lg h-56" >
+            <img class="mx-auto my-5 p-5 bg-white rounded-full" src="c1-assets/rabbit-cartoon.png" alt="">
+            <h4 class="font-bold">Rabit</h4>
+            <p>2 items</p>
+          </div>
+        </div>
+      </section>
 
+
+      <!-- Tranding pets -->
+       <section class="bg-bg2">
+        <div class="max-w-screen-xl mx-auto mb-20 pt-20 pb-20">
+          <div>
+            <h3 class="font-bold font-primaryfont text-2xl mb-10">Trending Pet Products</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
+
+            <div class="bg-bg mb-4 lg:mb-0  rounded-md p-14 f flex ">
+              
+              <div>
+                <h2 class="font-primaryfont text-xl font-bold">T-Shirt For Dogs</h2>
+              <p class="my-4 text-gray-600"> Discover a world of treats, toys, and <br> essentials handpicked fot pets.</p>
+              <button class="bg-white rounded-md p-2 w-28 mt-5"><a class="" href="">Shop Now</a></button>
+              </div>
+              
+             
+              <div>
+                <img class=" mx-auto"  src="c1-assets/cute-pet-small.png" alt="">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3">
+              <div class="grid grid-cols-2 rounded-md border-solid border-2 border-gray-100 bg-white w-auto p-3">
+                
+                <!-- product 1 -->
+                <div><img class="bg-bg2 p-3 mx-auto rounded-md " src="c1-assets/dog-cartoon.png" alt="">
+                </div>
+                <div class=""> <p><i class="text-yellow-400 fa-solid fa-star"></i> 4.5</p>
+                <h4 class="font-bold font-secondfont">Pet Bed</h4>
+                <p class="font-secondfont">$39.99</p>
+                </div>
+              </div>
+              <!-- product 2 -->
+              <div class="grid grid-cols-2 rounded-md border-solid border-2 border-gray-100 bg-white w-auto p-3">
+                <div><img class="bg-bg2 p-3 mx-auto rounded-md " src="c1-assets/fish-cartoon.png" alt="">
+                </div>
+                <div class=""> <p><i class="text-yellow-400 fa-solid fa-star"></i> 4.5</p>
+                <h4 class="font-bold font-secondfont">Pet Bed</h4>
+                <p class="font-secondfont">$39.99</p>
+                </div>
+              </div>
+              <!-- product 3 -->
+              <div class="grid grid-cols-2 rounded-md border-solid border-2 border-gray-100 bg-white w-auto p-3">
+                <div><img class="bg-bg2 p-3 mx-auto rounded-md " src="c1-assets/bird-cartoon.png" alt="">
+                </div>
+                <div class=""> <p><i class="text-yellow-400 fa-solid fa-star"></i> 4.5</p>
+                <h4 class="font-bold font-secondfont">Pet Bed</h4>
+                <p class="font-secondfont">$39.99</p>
+                </div>
+              </div>
+              <!-- product 4 -->
+              <div class="grid grid-cols-2 rounded-md border-solid border-2 border-gray-100 bg-white w-auto p-3">
+                <div><img class="bg-bg2 p-3 mx-auto rounded-md " src="c1-assets/rabbit-cartoon.png" alt="">
+                </div>
+                <div class=""> <p><i class="text-yellow-400 fa-solid fa-star"></i> 4.5</p>
+                <h4 class="font-bold font-secondfont">Pet Bed</h4>
+                <p class="font-secondfont">$39.99</p>
+                </div>
+              </div>
+              <!-- product  5-->
+              <div class="grid grid-cols-2 rounded-md border-solid border-2 border-gray-100 bg-white w-auto p-3">
+                <div><img class="bg-bg2 p-3 mx-auto rounded-md " src="c1-assets/bird-cartoon.png" alt="">
+                </div>
+                <div class=""> <p><i class="text-yellow-400 fa-solid fa-star"></i> 4.5</p>
+                <h4 class="font-bold font-secondfont">Pet Bed</h4>
+                <p class="font-secondfont">$39.99</p>
+                </div>
+              </div>
+              <!-- product 6 -->
+              <div class="grid grid-cols-2 rounded-md border-solid border-2 border-gray-100 bg-white w-auto p-3">
+                <div><img class="bg-bg2 p-3 mx-auto rounded-md " src="c1-assets/pet-couch.png" alt="">
+                </div>
+                <div class=""> <p><i class="text-yellow-400 fa-solid fa-star"></i> 4.5</p>
+                <h4 class="font-bold font-secondfont">Pet Bed</h4>
+                <p class="font-secondfont">$39.99</p>
+                </div>
+              </div>
+              <!-- product 7 -->
+              <div class="grid grid-cols-2 rounded-md border-solid border-2 border-gray-100 bg-white w-auto p-3">
+                <div><img class="bg-bg2 p-3 mx-auto rounded-md " src="c1-assets/fish-cartoon.png" alt="">
+                </div>
+                <div class=""> <p><i class="text-yellow-400 fa-solid fa-star"></i> 4.5</p>
+                <h4 class="font-bold font-secondfont">Pet Bed</h4>
+                <p class="font-secondfont">$39.99</p>
+                </div>
+              </div>
+              <!-- product 8 -->
+              <div class="grid grid-cols-2 rounded-md border-solid border-2 border-gray-100 bg-white w-auto p-3">
+                <div><img class="bg-bg2 p-3 mx-auto rounded-md " src="c1-assets/pet-couch.png" alt="">
+                </div>
+                <div class=""> <p><i class="text-yellow-400 fa-solid fa-star"></i> 4.5</p>
+                <h4 class="font-bold font-secondfont">Pet Bed</h4>
+                <p class="font-secondfont">$39.99</p>
+                </div>
+              </div>
+              <!-- product 9 -->
+              <div class="grid grid-cols-2 rounded-md border-solid border-2 border-gray-100 bg-white w-auto p-3">
+                <div><img class="bg-bg2 p-3 mx-auto rounded-md " src="c1-assets/rabbit-cartoon.png" alt="">
+                </div>
+                <div class=""> <p><i class="text-yellow-400 fa-solid fa-star"></i> 4.5</p>
+                <h4 class="font-bold font-secondfont">Pet Bed</h4>
+                <p class="font-secondfont">$39.99</p>
+                </div>
+              </div>
+  
+  
+              
+  
+            </div>
+  
+          </div>
+
+        </div>
+       </section>
+
+        <!-- Low Prices -->
+       <section class="max-w-screen-xl mx-auto  lg:pt-20 mb-10">
+        <div>
+          
+          <h1 class="font-primaryfont font-bold text-xl mb-5">Everyday low Price</h1>
+        </div>
+        <div class="grid
+        grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
+
+        <div class="grid grid-cols-2  bg-yellow-400 items-center justify-between rounded-md">
+          <div class="ml-14 my-5 lg:ml-16">
+            <h5 class="font-secondfont">Under Price</h5>
+            <h3 class="font-primaryfont text-xl font-bold my-3">Pet Grooming Mitt</h3>
+            <h4 class="font-primaryfont font-bold text-xs text-white mb-5" >(Easy Hair Removal)</h4>
+            <h1 class="font-primaryfont font-bold text-3xl">$7.99</h1>
+
+          </div>
+          <div class=""><img class="h-4/5 pl-24"  src="c1-assets/cute-dog-mid.png" alt=""></div>
+
+        </div>
+        <div class="grid grid-cols-2 bg-lime-400 rounded-md justify-between ">
+          <div>
+            <h3 class="font-bold font-primaryfont text-xl p-3 ml-10 mt-5 lg:mt-20">T-Shirt for Dogs</h3>
+            <h1 class="font-bold font-primaryfont text-3xl text-yellow-400 ml-12">$7.99</h1>
+          </div>
+          <div><img class=" p-5  mx-auto" src="c1-assets/cute-pet-mid.png" alt=""></div>
+        </div>
+      </div>
+
+       </section>
+
+       <!-- get paosome news -->
+        
     </main>
-    <footer>
-
-    </footer>
+        <div class=" mx-4 relative -mb-48  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10  max-w-screen-xl lg:mx-auto   pt-20 pb-20 bg-bg2  rounded-xl ">
+          <div><img class="h-60 ml-28" src="c1-assets/cute-pet-mid.png" alt=""></div>
+          <div class="p-5 ">
+            <h1 class="font-primaryfont text-2xl font-bold mb-3 text-center lg:text-left" >Get Pawsome News!</h1>
+            <p class="text-center lg:text-start">Exclusive training tips, ticks, product deals and more.</p>
+            <div><input class="p-3 my-10 border-none bg-white w-full lg:w-3/5" type="text" placeholder="Enter Email"></div>
+            <button class="h-10 ml-28 lg:ml-0  w-28 border-none bg-yellow-400 rounded-lg hover:bg-yellow-500 transition ease-in-out"><a href="">Subscribe</a></button>
+          </div>
+        </div>
+      
+  <footer class=" bg-bg  p-10 pt-72 pb-14">
+    <div class="grid grid-cols-1 lg:grid-cols-3 max-w-screen-xl mx-auto lg:gap-56">
+      <div>
+        <div class="flex w-auto mb-3 lg:mb-0"><img  src="c1-assets/logo-footer.png" alt=""><span class="mt-2 font-secondfont text-2xl ">Browse4Pets</span></div>
+        
+        
+        <p class="font-secondfont mb-5 lg:mb-0">Discover a world of treats, toys,<br> and  essentials handpicked for your furry friends</p>
+        
+      </div>
+      <div class="mb-5 lg:mb-0" >
+        <div><a class="link link-hover">Find a pet</a></div>
+        <div><a class="link link-hover">Breeds</a></div>
+        <div><a class="link link-hover">Contact us</a></div>
+      </div>
+      <div>
+        <h6 class="font-secondfont  font-bold">Follow Us</h6>
+        <div class="flex gap-4">
+           <a class="link link-hover"><i class="fa-brands fa-facebook"></i></a>
+        <a class="link link-hover"><i class="fa-brands fa-instagram"></i></a>
+        <a class="link link-hover"><i class="fa-brands fa-linkedin"></i></a>
+        <a class="link link-hover"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+       
+      </div>
+    </div>
+    
+  </footer>
+  
+      
 </body>
 </html>
