@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Care</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Pet Shop</title>
+    <link rel="shortcut icon" href="c1-assets/pet-fav.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -33,7 +36,18 @@
           }
         }
       </script>
-    
+    <style>
+       @keyframes shake {
+            0%, 100% { transform: rotate(0); }
+            25% { transform: rotate(-10deg); }
+            50% { transform: rotate(10deg); }
+        }
+        .animate-shake {
+            animation: shake 0.5s infinite ease-in-out;
+        }
+
+
+    </style>
 
 
 </head>
@@ -41,10 +55,10 @@
     <header class="">
       <!-- nav-bar design -->
         <div class=" font-secondfont bg-nav navbar bg-base-100 mb-20">
-            <div class="flex justify-between lg:gap-56  max-w-screen-xl mx-auto">
+            <div class="flex justify-between lg:gap-56 md:gap-40 max-w-screen-xl mx-auto">
                 <div class="navbar-start">
                 
-                    <div class="flex">
+                    <div class="flex ">
                         <img src="c1-assets/logo-header.png" alt=""> 
                         <h3 class="ml-2 mt-2 mr-44 lg:mr-0   text-2xl ">Browse<span class="text-yellow-300">4</span>Pets</h3>
                       </div>
@@ -57,7 +71,7 @@
                     </ul>
                   </div>
                 <div class="flex">
-                  <button class="hidden lg:visible btn btn-ghost btn-circle">
+                  <button class="hidden md:flex btn btn-ghost btn-circle">
                     <div class="indicator">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +88,7 @@
                       <span class="badge badge-xs badge-primary indicator-item"></span>
                     </div>
                   </button>
-                  <button class="hidden lg:visible btn btn-ghost btn-circle">
+                  <button class="hidden md:flex btn btn-ghost btn-circle">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-5 w-5"
@@ -89,14 +103,14 @@
                     </svg>
                   </button>
                 
-                <div class=" hidden lg:visible ">
-                    <button class="mx-2 sm:hidden h-10 border-solid border-2 w-24 border-yellow-400 rounded-lg hover:bg-green-400 transition ease-in-out hover:border-none">Login</button>
+                <div class="hidden md:flex">
+                    <button class="mx-2   h-10 border-solid border-2 w-24 border-yellow-400 rounded-lg hover:bg-green-400 transition ease-in-out hover:border-none">Login</button>
                 </div>
-                <div class="hidden lg:visible">
+                <div class="hidden md:flex">
                     <button class="h-10   w-28 border-none bg-yellow-400 rounded-lg hover:bg-yellow-500 transition ease-in-out">Register</button>
                 </div>
-                <div class="dropdown visible md:hidden lg:hidden font-secondfont ">
-                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <div class="   dropdown lg:hidden  font-secondfont ">
+                    <div tabindex="0" role="button" class=" btn btn-ghost btn-circle">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-5 w-5"
@@ -118,11 +132,15 @@
 
           <!-- banner design -->
           
-            <div class="max-w-screen-xl mx-auto mb-24">
+            <div class="mx-4 max-w-screen-xl lg:mx-auto mb-24">
               <div class="lg:relative lg:-mb-96">
-                <h3 class="font-primaryfont text-5xl leading-relaxed ">Pamper Your Pet, <br> Because They Deserve <br> the Bes</h3>
+                <h3 class="font-primaryfont text-5xl leading-normal ">Pamper Your Pet, <br> Because They Deserve <br> the Bes</h3>
               <p class="my-5 font-secondfont text-mini"> Discover a world of treats, toys, and essentials handpicked for <br> your furry friends. Shop now and make tails wag with joy!</p>
-              <button class="h-10  w-28 border-none bg-yellow-400 rounded-lg hover:bg-yellow-500 transition ease-in-out"><a href="">Find a pet</a></button>
+
+              <h2 class="mt-2 font-secondfont w-72 text-yellow-500 animate-shake">
+                Find your perfect furry friend! 🐾
+            </h2>
+              <button class="h-10 mt-8 w-28 border-none bg-yellow-400 rounded-lg hover:bg-yellow-500 transition ease-in-out"><a href="">Find a pet</a></button>
               </div>
               <div class="">
                 <img class="" src="c1-assets/cat-big.png" alt="">
@@ -132,7 +150,7 @@
          
     </header>
     <main>
-      <section class="max-w-screen-xl mx-auto mb-20">
+      <section class="mx-4 max-w-screen-xl lg:mx-auto mb-20">
         <h3 class="mb-10 font-primaryfont text-2xl">Browse By Categories</h3>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-6 mx-auto text-center">
           <div class=" bg-bg rounded-lg ">
@@ -170,25 +188,25 @@
 
 
       <!-- Tranding pets -->
-       <section class="bg-bg2">
-        <div class="max-w-screen-xl mx-auto mb-20 pt-20 pb-20">
+       <section class="lg:bg-bg2 mx-4 lg:mx-0">
+        <div class="max-w-screen-xl mx-auto lg:mb-20 lg:pt-20 pb-20">
           <div>
             <h3 class="font-bold font-primaryfont text-2xl mb-10">Trending Pet Products</h3>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
 
-            <div class="bg-bg mb-4 lg:mb-0  rounded-md p-14 f flex ">
+            <div class="bg-bg mb-4 lg:mb-0  rounded-md p-14  flex ">
               
               <div>
                 <h2 class="font-primaryfont text-xl font-bold">T-Shirt For Dogs</h2>
-              <p class="my-4 text-gray-600"> Discover a world of treats, toys, and <br> essentials handpicked fot pets.</p>
-              <button class="bg-white rounded-md p-2 w-28 mt-5"><a class="" href="">Shop Now</a></button>
+              <p class="my-4 text-gray-600 font-secondfont"> Discover a world of treats, toys, and <br> essentials handpicked fot pets.</p>
+              <button class="bg-white hover:bg-yellow-500 transition ease-in-out rounded-md p-2 w-28 mt-5"><a class="" href="">Shop Now</a></button>
               </div>
               
              
               <div>
-                <img class=" mx-auto"  src="c1-assets/cute-pet-small.png" alt="">
+                <img class=" ml-5 w-full lg:mx-auto"  src="c1-assets/cute-pet-small.png" alt="">
               </div>
             </div>
 
@@ -287,35 +305,91 @@
        </section>
 
         <!-- Low Prices -->
-       <section class="max-w-screen-xl mx-auto  lg:pt-20 mb-10">
-        <div>
+       <section class="max-w-screen-xl mx-4 lg:mx-auto   mb-10">
+        <div class="">
           
-          <h1 class="font-primaryfont font-bold text-xl mb-5">Everyday low Price</h1>
+          <h1 class="font-primaryfont font-bold text-2xl mb-10">Everyday low Price</h1>
         </div>
+        <!-- pet Groming Mitt Card -->
         <div class="grid
-        grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
+        grid-cols-1 md:grid-cols-2 lg:grid-cols-5 lg:gap-5 ">
 
-        <div class="grid grid-cols-2  bg-yellow-400 items-center justify-between rounded-md">
-          <div class="ml-14 my-5 lg:ml-16">
+        <div class="col-span-3 bg-gradient-to-r from-purple-200 to-blue-200 p-3 rounded-xl flex justify-around items-center h-5/6">
+          <div class="p-5 my-5 ">
             <h5 class="font-secondfont">Under Price</h5>
             <h3 class="font-primaryfont text-xl font-bold my-3">Pet Grooming Mitt</h3>
             <h4 class="font-primaryfont font-bold text-xs text-white mb-5" >(Easy Hair Removal)</h4>
             <h1 class="font-primaryfont font-bold text-3xl">$7.99</h1>
 
           </div>
-          <div class=""><img class="h-4/5 pl-24"  src="c1-assets/cute-dog-mid.png" alt=""></div>
+          <div  class=""><img class=" w-80 p-4 "  src="c1-assets/cute-dog-mid.png" alt=""></div>
 
         </div>
-        <div class="grid grid-cols-2 bg-lime-400 rounded-md justify-between ">
-          <div>
-            <h3 class="font-bold font-primaryfont text-xl p-3 ml-10 mt-5 lg:mt-20">T-Shirt for Dogs</h3>
-            <h1 class="font-bold font-primaryfont text-3xl text-yellow-400 ml-12">$7.99</h1>
+        <!-- T-Shirt for Dogs Card -->
+        <div class="col-span-2 bg- p-6 rounded-xl flex justify-around bg-gradient-to-r from-red-100 to-yellow-200  w-auto lg:h-5/6">
+          <div class="flex-1 p-5 ">
+            <h3 class="font-bold font-primaryfont text-xl  ">T-Shirt for Dogs</h3>
+            <h1 class="font-bold font-primaryfont text-3xl text-yellow-400  mt-5">$7.99</h1>
           </div>
-          <div><img class=" p-5  mx-auto" src="c1-assets/cute-pet-mid.png" alt=""></div>
+          <div><img class=" lg:w-60 " src="c1-assets/cute-pet-mid.png" alt=""></div>
         </div>
       </div>
 
+      
        </section>
+
+       <!-- faq section -->
+        <section class="mx-4 my-20 lg:max-w-screen-xl lg:mx-auto">
+          <h1 class="font-primaryfont font-bold text-3xl  mb-10">Frequently Asked Questions (FAQ)</h1>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  ">
+            <div>
+              <img class="lg:w-4/5" src="c1-assets/faq.png" alt="">
+            </div>
+           <div class=" mt-10 ">
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+              <div class="collapse-title text-xl font-medium font-secondfont">1. What types of pets do you sell?</div>
+              <div class="collapse-content font-secondfont">
+                <p>We offer a variety of pets, including dogs, cats, birds, fish, and small animals like rabbits and hamsters.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200 my-5">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium font-secondfont">2. Do you provide pet adoption services?</div>
+              <div class="collapse-content font-secondfont">
+                <p>Yes! We support pet adoption and partner with local shelters to help animals find loving homes.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium font-secondfont">3. Do you offer pet delivery services?</div>
+              <div class="collapse-content font-secondfont">
+                <p>Yes, we offer safe and secure pet delivery services for certain locations. Contact us for details.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200 my-5">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium font-secondfont">4. Do you sell organic or special diet pet food?</div>
+              <div class="collapse-content font-secondfont">
+                <p>Yes! We have a variety of organic, grain-free, and specialty diet food options for pets with specific needs.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium font-secondfont">5. How can I contact customer support?</div>
+              <div class="collapse-content font-secondfont">
+                <p>You can reach us via email at [yahoo@.com], call us at [+88003492942] sit our store during business hours.
+  
+                </p>
+              </div>
+            </div>
+    
+           </div>
+          </div>
+         
+        </section>
+        
+       
 
        <!-- get paosome news -->
         
@@ -329,9 +403,11 @@
             <button class="h-10 ml-28 lg:ml-0  w-28 border-none bg-yellow-400 rounded-lg hover:bg-yellow-500 transition ease-in-out"><a href="">Subscribe</a></button>
           </div>
         </div>
-      
+
+
+       <!-- footer area -->
   <footer class=" bg-bg  p-10 pt-72 pb-14">
-    <div class="grid grid-cols-1 lg:grid-cols-3 max-w-screen-xl mx-auto lg:gap-56">
+    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-14 lg:grid-cols-3  max-w-screen-xl mx-auto lg:gap-56">
       <div>
         <div class="flex w-auto mb-3 lg:mb-0"><img  src="c1-assets/logo-footer.png" alt=""><span class="mt-2 font-secondfont text-2xl ">Browse4Pets</span></div>
         
